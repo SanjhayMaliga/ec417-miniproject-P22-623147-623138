@@ -1,0 +1,13 @@
+{
+  "lookback": 120,
+  "horizons": [1, 6, 12, 24],
+  "train_stride": 3,
+  "seeds": [17, 42, 147],
+  "hidden_size": 24,
+  "epochs": 12,
+  "patience": 3,
+  "batch_size": 256,
+  "learning_rate": 0.003,
+  "ridge_alphas": [1.0, 100.0, 10000.0],
+  "threads": 2
+}
