@@ -1,0 +1,34 @@
+{
+  "config": {
+    "lookback": 120,
+    "horizons": [
+      1,
+      6,
+      12,
+      24
+    ],
+    "train_stride": 3,
+    "seeds": [
+      17,
+      42,
+      147
+    ],
+    "hidden_size": 24,
+    "epochs": 12,
+    "patience": 3,
+    "batch_size": 256,
+    "learning_rate": 0.003,
+    "ridge_alphas": [
+      1.0,
+      100.0,
+      10000.0
+    ],
+    "threads": 2
+  },
+  "device": "cpu",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+  "torch": "2.15.0+cpu",
+  "ridge_alpha": 1.0,
+  "ridge_selection_seconds": 2.408107299823314
+}

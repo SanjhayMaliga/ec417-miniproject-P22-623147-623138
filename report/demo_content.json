@@ -1,0 +1,54 @@
+[
+  {
+    "title": "JenaClimateForecasting",
+    "body": "P22 - EC417 Introduction to Machine Intelligence\nM Sanjhay Baargav (623147)\nTrinesh Kumar (623138)",
+    "notes": "Introduce the team and the forecasting question. 20 seconds."
+  },
+  {
+    "title": "Forecasting task",
+    "body": "120 hourly observations predict temperature 24 hours ahead\nPrimary metric: MAE in degrees Celsius\nAuxiliary forecast horizons: 1, 6 and 12 hours",
+    "notes": "Explain forecast origin, history and target. 25 seconds."
+  },
+  {
+    "title": "Chronological data split",
+    "body": "420,551 raw observations\nTrain: 2009-2014\nValidation: 2015\nFinal test: 2016",
+    "notes": "Source: https://www.bgc-jena.mpg.de/wetter/ and https://www.tensorflow.org/tutorials/structured_data/time_series. 30 seconds."
+  },
+  {
+    "title": "Preprocessing without future information",
+    "body": "Hourly bins end at their timestamp\nWind components replace direction and speed\nFill gaps within each period\nFit normalization using training years\nCreate windows after splitting",
+    "notes": "Explain -9999 sentinels, missing-target exclusion, and split-boundary tests. 30 seconds."
+  },
+  {
+    "title": "Baselines and GRU",
+    "body": "Persistence repeats the latest temperature\nRidge uses the flattened 120-hour window\nGRU uses 24 hidden units and four outputs\nValidation chooses penalties and checkpoints",
+    "notes": "Reference: https://arxiv.org/abs/1406.1078. Explain gates, not just the name. 35 seconds."
+  },
+  {
+    "title": "Calendar feature experiment",
+    "body": "Add four inputs to the GRU\nSine and cosine of hour\nSine and cosine of position within the year\nKeep data, seeds and training rules fixed",
+    "notes": "The input parameter count increases slightly. Both GRUs already share the auxiliary horizon outputs. 30 seconds."
+  },
+  {
+    "title": "Measured 24-hour test results",
+    "body": "Calendar features reduced GRU 24-hour test MAE by 0.094 degrees C (4.3%).",
+    "kind": "results",
+    "notes": "Read MAE means and standard deviations. Baselines are deterministic. No significance claim. 40 seconds."
+  },
+  {
+    "title": "Error versus forecast horizon",
+    "body": "Longer horizons test a different prediction difficulty",
+    "kind": "horizon",
+    "notes": "Use the measured horizon chart. Error bars in the report show seed variability. 30 seconds."
+  },
+  {
+    "title": "Forecast errors and limits",
+    "body": "Largest calendar-GRU monthly MAE: 2.901 C in month 1\nOne station and one test year\nOverlapping windows share weather conditions\nWeather causes of extreme errors remain hypotheses",
+    "notes": "The calendar GRU's largest monthly mean error occurs in month 1 (2.901 C across 601 forecast origins). For seed 17, the largest stored error is 11.44 C at 2016-05-23 19:00:00: actual 13.19 C versus prediction 24.63 C. Rapid temperature changes and missing spatial weather information are possible explanations, not verified causes. 35 seconds."
+  },
+  {
+    "title": "Reproduction and next steps",
+    "body": "python run_project.py\nReview the code and explain the results\nNext: variable ablation and new test years\nAI assistance: OpenAI Codex, disclosed in the report",
+    "notes": "Show the README, tests and source modules. Explain team verification and commit-history requirements. 25 seconds."
+  }
+]
