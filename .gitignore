@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/raw/
+data/processed/
+checkpoints/
+tmp/
+.chart-data-*/
+results/predictions.npz
+*.zip
+EC417_*.pdf
+EC417_*.md

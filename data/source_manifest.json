@@ -1,0 +1,10 @@
+{
+  "dataset": "Jena Climate 2009-2016",
+  "download_url": "https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip",
+  "official_source": "https://www.bgc-jena.mpg.de/wetter/",
+  "accessed_utc": "2026-10-29T16:46:30.106488+00:00",
+  "archive_sha256": "63d757501e92284a7de7cdbef0337f03b24e13ead7ac2b5b8c86a18d8e38ba5b",
+  "csv_sha256": "9626d3964f7afb3fa94b6f3d3a0e92fe96e4a4477c31ed9875cc64d6717c129f",
+  "archive_bytes": 13568290,
+  "terms_url": "https://www.bgc-jena.mpg.de/wetter/weather_data.html"
+}
